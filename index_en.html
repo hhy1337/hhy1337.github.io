@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haoyu Hong | Portfolio</title>
+    <style>
+        /* Global reset */
+        :root {
+            --bg-color: #f9f9f9;
+            --text-color: #333;
+            --accent-color: #2563eb;
+            --card-bg: #ffffff;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Layout container */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 4rem 0;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: #666;
+            margin: 0.25rem 0;
+        }
+
+        .avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin: 0 auto 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: #fff;
+            background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+            user-select: none;
+        }
+
+        /* Sections */
+        section {
+            margin-bottom: 3rem;
+        }
+
+        h2 {
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 0.5rem;
+            display: inline-block;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Cards */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .card {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            margin-top: 0;
+        }
+
+        /* Links */
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            margin-top: 4rem;
+            color: #888;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <!-- If you have an avatar image, uncomment the img tag below and remove the div -->
+            <!-- <img src="avatar.jpg" alt="Avatar" class="avatar"> -->
+            <div class="avatar">HH</div>
+            <h1>Hi, I'm Haoyu Hong 👋</h1>
+            <p>BSc Computer Science student @ University of Birmingham</p>
+            <p>I build practical software: backend services, automation scripts, and clean web pages.</p>
+        </header>
+
+        <!-- About -->
+        <section id="about">
+            <h2>About</h2>
+            <p>
+                I'm a first-year Computer Science student based in the UK. I enjoy turning ideas into working
+                software and I care about clean code, debugging, and building reliable features.
+            </p>
+            <p><strong>Skills:</strong></p>
+            <ul>
+                <li>Java (OOP, debugging, testing)</li>
+                <li>Python (automation scripts, data processing)</li>
+                <li>C++ (foundations, problem solving)</li>
+                <li>Web (HTML, CSS, JavaScript fundamentals)</li>
+                <li>Git & GitHub (version control, collaboration)</li>
+            </ul>
+        </section>
+
+        <!-- Projects -->
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>🚀 Java Simulation Engine</h3>
+                    <p>
+                        A Java-based simulation system built with object-oriented design. Implemented core
+                        logic, handled edge cases, and fixed test failures through iterative debugging.
+                    </p>
+                    <a href="#" title="Replace with your GitHub repo link">View on GitHub &rarr;</a>
+                </div>
+
+                <div class="card">
+                    <h3>⚙️ Python Automation Scripts</h3>
+                    <p>
+                        A collection of small automation tools for everyday tasks (file processing, data cleanup,
+                        and simple utilities). Focused on readability and reusability.
+                    </p>
+                    <a href="#" title="Replace with your GitHub repo link">View on GitHub &rarr;</a>
+                </div>
+
+                <div class="card">
+                    <h3>🪙 Stablecoins Research Project</h3>
+                    <p>
+                        Group research project on stablecoins: definitions, mechanisms, benefits, and risks.
+                        Contributed to research synthesis, structure, and presentation materials.
+                    </p>
+                    <a href="#" title="Replace with your GitHub repo link or PDF link">View materials &rarr;</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>If you'd like to collaborate or have a small project in mind, feel free to reach out:</p>
+            <ul>
+                <li>Email: <a href="mailto:your.email@example.com">your.email@example.com</a> <em>(replace with your email)</em></li>
+                <li>GitHub: <a href="https://github.com/hehehehong">github.com/hehehehong</a></li>
+                <li>LinkedIn: <a href="https://www.linkedin.com/in/haoyuhong2006/">linkedin.com/in/haoyuhong2006</a></li>
+            </ul>
+        </section>
+
+        <footer>
+            <p>&copy; 2025 Haoyu Hong. All rights reserved.</p>
+        </footer>
+    </div>
+
+</body>
+</html>
