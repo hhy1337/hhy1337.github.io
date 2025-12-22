@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Haoyu Hong | Portfolio</title>
+  <style>
+    :root{
+      --bg:#f9f9f9;
+      --text:#222;
+      --muted:#666;
+      --card:#ffffff;
+      --accent:#2563eb;
+      --border: rgba(0,0,0,0.08);
+      --shadow: 0 6px 16px rgba(0,0,0,0.06);
+      --radius: 12px;
+    }
+
+    *{ box-sizing:border-box; }
+
+    body{
+      margin:0;
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+      background: url('https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2400&auto=format&fit=crop') center / cover fixed no-repeat;
+      color:var(--text);
+      line-height:1.6;
+    }
+
+    a{ color:var(--accent); text-decoration:none; }
+    a:hover{ text-decoration:underline; }
+
+    .container{
+      max-width: 1050px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem;
+    }
+
+    /* Two-column layout */
+    .layout{
+      display:flex;
+      gap: 2rem;
+      align-items:flex-start;
+    }
+
+    .left{
+      flex: 0 0 360px;
+      position: sticky;
+      top: 1.25rem;
+      align-self:flex-start;
+    }
+
+    .right{
+      flex: 1 1 auto;
+      min-width: 0;
+    }
+
+    @media (max-width: 920px){
+      .layout{ flex-direction:column; }
+      .left{ position: static; flex: 1 1 auto; }
+    }
+
+    /* Cards */
+    .card{
+      background:var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 1.25rem;
+    }
+
+    .stack > * + *{ margin-top: 1rem; }
+
+    /* Header / identity */
+    .avatar{
+      width: 92px;
+      height: 92px;
+      border-radius: 50%;
+      background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:white;
+      font-weight:700;
+      font-size: 1.4rem;
+      user-select:none;
+    }
+
+    h1{
+      font-size: 2rem;
+      margin: 0.75rem 0 0.25rem 0;
+      letter-spacing: -0.02em;
+    }
+
+    .subtitle{
+      margin: 0;
+      color: var(--muted);
+      font-size: 1.02rem;
+    }
+
+    .tagline{
+      margin: 0.5rem 0 0 0;
+      color: var(--muted);
+    }
+
+    /* Buttons for links */
+    .btn-row{
+      display:flex;
+      flex-wrap: wrap;
+      gap: 0.65rem;
+      margin-top: 1rem;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      gap: 0.5rem;
+      padding: 0.55rem 0.85rem;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: #fff;
+      color: var(--text);
+      text-decoration: none;
+      transition: transform 0.08s ease, box-shadow 0.08s ease, border-color 0.08s ease;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+      font-size: 0.95rem;
+      line-height: 1;
+    }
+    .btn:hover{
+      text-decoration:none;
+      transform: translateY(-1px);
+      border-color: rgba(37,99,235,0.35);
+      box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+    }
+
+    .btn.primary{
+      background: var(--accent);
+      color: #fff;
+      border-color: rgba(37,99,235,0.7);
+    }
+
+    /* Sections on right */
+    .section{
+      padding: 0.25rem 0;
+    }
+
+    .section h2{
+      margin: 0 0 0.75rem 0;
+      font-size: 1.25rem;
+      letter-spacing: -0.01em;
+    }
+
+    .section p{ margin: 0.35rem 0; color: var(--muted); }
+
+    .list{
+      margin: 0.5rem 0 0 1.1rem;
+      color: var(--muted);
+    }
+
+    .projects{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 0.85rem;
+      margin-top: 0.75rem;
+    }
+
+    .project{
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1rem 1rem;
+    }
+
+    .project h3{
+      margin: 0 0 0.35rem 0;
+      font-size: 1.05rem;
+    }
+
+    .project .meta{
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    footer{
+      margin-top: 2rem;
+      color: #888;
+      font-size: 0.9rem;
+      text-align:left;
+    }
+
+    .divider{
+      height: 1px;
+      background: var(--border);
+      margin: 1rem 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="layout">
+      <!-- LEFT: profile / contact -->
+      <aside class="left">
+        <div class="card stack">
+          <div class="avatar">HH</div>
+          <div>
+            <h1>Haoyu Hong</h1>
+            <p class="subtitle">BSc Computer Science · University of Birmingham (2025–2028)</p>
+            <p class="tagline">I build practical software: backend features, automation scripts, and clean web pages.</p>
+          </div>
+
+          <div class="divider"></div>
+
+          <div class="section">
+            <h2>Skills</h2>
+            <ul class="list">
+              <li>Java (OOP, debugging, testing)</li>
+              <li>Python (automation scripts, data processing)</li>
+              <li>C++ (foundations, problem solving)</li>
+              <li>Web (HTML, CSS, JavaScript fundamentals)</li>
+              <li>Git & GitHub</li>
+            </ul>
+          </div>
+
+          <div class="divider"></div>
+
+          <div class="section">
+            <h2>Links</h2>
+            <div class="btn-row">
+              <!-- Replace email below -->
+              <a class="btn primary" href="mailto:hehehong2006@163.com" title="Replace with your email">Email</a>
+              <a class="btn" href="https://github.com/hehehehong" target="_blank" rel="noreferrer">GitHub</a>
+              <a class="btn" href="https://www.linkedin.com/in/haoyuhong2006/" target="_blank" rel="noreferrer">LinkedIn</a>
+            </div>
+            <p style="margin-top:0.75rem;">
+              <small style="color:var(--muted);">Tip: replace <strong>hehehong2006@163.com</strong> with your real email.</small>
+            </p>
+          </div>
+
+          <footer>
+            © 2025 Haoyu Hong
+          </footer>
+        </div>
+      </aside>
+
+      <!-- RIGHT: content -->
+      <main class="right">
+        <div class="card">
+          <div class="section">
+            <h2>About</h2>
+            <p>
+              I'm a first-year Computer Science student based in the UK. I enjoy turning ideas into working
+              software and I care about clean code, debugging, and building reliable features.
+            </p>
+          </div>
+
+          <div class="divider"></div>
+
+          <div class="section" id="projects">
+            <h2>Projects</h2>
+            <p>
+              Coming soon — I'm currently building and refining my projects.
+              This section will be updated with real-world and coursework-based work.
+            </p>
+
+            <!-- Placeholder cards (no links) -->
+            <div class="projects">
+              <div class="project">
+                <h3>🚀 Project 1 (in progress)</h3>
+                <p class="meta">Description and link will be added soon.</p>
+              </div>
+              <div class="project">
+                <h3>⚙️ Project 2 (in progress)</h3>
+                <p class="meta">Description and link will be added soon.</p>
+              </div>
+              <div class="project">
+                <h3>🧩 Project 3 (in progress)</h3>
+                <p class="meta">Description and link will be added soon.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="divider"></div>
+
+          <div class="section">
+            <h2>Availability</h2>
+            <p>
+              Open to part-time freelance tasks and small projects (automation, debugging, simple web pages).
+            </p>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+</body>
+</html>
