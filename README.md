@@ -31,5 +31,5 @@ The website is actively maintained and will be updated as new projects are compl
 ## Contact
 
 - Email: hehehehong2006@163.com  
-- GitHub: https://github.com/hehehehong  
+- GitHub: https://github.com/hhy1337
 - LinkedIn: https://www.linkedin.com/in/haoyuhong2006/
